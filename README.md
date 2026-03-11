@@ -2,13 +2,13 @@
 
 # 🤖 Overview 
 <center>
-  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/introductionV16.jpg" width="800" alt="">
+  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/introductionV16.jpg" alt="">
 </center>
 
 # 📡 Method Overview 
 
 <center>
-  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/FrameworkV15.jpg" width="800" alt="">
+  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/FrameworkV15.jpg" alt="">
 </center>
 
 # ⚙️ Step-1. Environment Setup
@@ -52,7 +52,7 @@ Verify installation:
 ## 🔍 Overview of KG-Construction
 
 <center>
-  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/KGV5.jpg" width="800" alt="">
+  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/KGV5.jpg" alt="">
 </center>
 
 
