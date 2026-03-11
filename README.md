@@ -5,7 +5,7 @@
   <img src="https://github.com/jylEcho/PathMem/blob/main/figs/introductionV16.jpg" alt="">
 </center>
 
-Overview of PathMem. WM activates relevant LTM and transforms them into an updated WM for interpretable reasoning
+## Overview of PathMem. WM activates relevant LTM and transforms them into an updated WM for interpretable reasoning
 
 # 📡 Method Overview 
 
@@ -13,7 +13,7 @@ Overview of PathMem. WM activates relevant LTM and transforms them into an updat
   <img src="https://github.com/jylEcho/PathMem/blob/main/figs/FrameworkV15.jpg" alt="">
 </center>
 
-Framework of PathMem. A memory-augmented MLLMs for computational pathology that aligns visual, textual, and knowledge graph representations, and adaptively activates LTM for knowledge-grounded reasoning about pathology.
+## Framework of PathMem. A memory-augmented MLLMs for computational pathology that aligns visual, textual, and knowledge graph representations, and adaptively activates LTM for knowledge-grounded reasoning about pathology.
 
 
 # ⚙️ Step-1. Environment Setup
