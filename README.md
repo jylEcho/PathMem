@@ -44,6 +44,13 @@ Verify installation:
 
 # 🧬 Step-2.Pathology Knowledge Graph Construction from PubMed
 
+## 🔍 Overview of KG-Construction
+
+<center>
+  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/KGV5.jpg" width="800" alt="">
+</center>
+
+
 ## ⚙️ 2.1 Configuration
 
 ```
