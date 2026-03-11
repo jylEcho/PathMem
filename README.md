@@ -45,60 +45,69 @@ Verify installation:
 Edit the following parameters in config.py
 ```
 
-2.1.1 PubMed API
+### 📧 2.1.1 PubMed API
 
-2.1.2 Set your email (required by NCBI):
 
+### 📡 2.1.2 Set your email (required by NCBI):
+
+```
   ENTREZ_EMAIL = "your_email@example.com"
+```
   
-2.1.3 LLM API
+### 🤖 2.1.3 LLM API
 
+```
   Configure your LLM API:
     API_KEY = "your_api_key"
     API_URL = "https://api.yunwu.ai/v1/chat/completions"
     MODEL_NAME = "gpt-4o"
+```
 
 The LLM is used to extract structured pathology information from abstracts.
 
-2.1.4 Data Paths
+### 📁 2.1.4 Data Paths
 
+```
 BASE_DIR = "/path/to/data"
-
 RAW_DIR = BASE_DIR + "/raw_extractions"
-
 KG_DIR = BASE_DIR + "/kg"
-
 MEMORY_DIR = BASE_DIR + "/memory"
+```
 
-### 2.2 Knowledge Graph Construction Pipeline
+## 🔗 2.2 Knowledge Graph Construction Pipeline
 
-2.2.1 PubMed Retrieval
+### 🔍 2.2.1 PubMed Retrieval
 
 The system automatically queries PubMed using a pathology-focused query:
 
+```
 ("lung squamous cell carcinoma"[MeSH Terms]
  OR "lung squamous cell carcinoma"[Title/Abstract])
 AND
 (histopathology OR morphology OR immunohistochemistry OR IHC)
 AND hasabstract[text]
+```
 
 The pipeline retrieves article PMIDs and downloads their metadata and abstracts.
 
-2.2.2 LLM-Based Information Extraction
+### 🧠 2.2.2 LLM-Based Information Extraction
 
 Each abstract is processed by an LLM to extract structured pathology knowledge.
 
 The LLM outputs a JSON structure including:
 
+```
   Disease
   Sites
   Histology
   Morphological features
   Biomarkers
   Diagnostic clues
+```
 
 Example schema:
 
+```
 {
   "disease": {"name": "", "qualifiers": []},
   "sites": {"primary_site": "", "metastatic_sites": []},
@@ -111,49 +120,65 @@ Example schema:
   "biomarkers": {...},
   "diagnostic_clues": [...]
 }
+```
 
 The LLM extraction strictly follows a predefined schema to ensure structured output. 
 
-2.2.3 Knowledge Graph Construction
+### 🧩 2.2.3 Knowledge Graph Construction
 
 Extracted information is converted into triples:
 
+```
 (head entity, relation, tail entity)
+```
 
 Example:
 
+```
 lung squamous cell carcinoma  HAS_IHC_MARKER  p40
 lung squamous cell carcinoma  HAS_ARCHITECTURE  keratinization
 lung squamous cell carcinoma  HAS_MUTATION  TP53
+```
 
 The graph builder also stores additional metadata:
-
-PMID
-
-confidence score
-
-evidence span
+- **PMID**
+- **confidence score**
+- **evidence span**
 
 Edges are filtered using a confidence threshold.
 
-2.2.4 Graph Storage
+### 💾 2.2.4 Graph Storage
 
-Two types of graph outputs are generated：triples.tsv edges.jsonl
+Two types of graph outputs are generated：
 
-2.2.5 Graph Storage
+```
+triples.tsv
+edges.jsonl
+```
 
+### ▶️ 2.2.5 Graph Storage
+
+```
 python main.py
+```
 
-## Step 3.Model training
+# 🏋️ Step 3.Model training
 
 Run the following script for model training:
+
+```
 ./WSI_LLAVA/scripts/v1_5/finetune_lora.sh
   --image_folder: path to the extracted feature files (.pt files)
   --data_path: path to the training data (.json files)
   --output_dir: path to save the trained model weights
+```
 
-## Step 4.Model Inference
+# 🔎 Step 4.Model Inference
+
 Run the following script for model inference:
+
+```
   ./WSI_LLAVA/scripts/wsi-vqa.sh
+```
 
 
