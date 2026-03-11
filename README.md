@@ -10,10 +10,12 @@ PyTorch: 2.7.1 + CUDA 12.6
 GPU recommended (for other components in the full project)
 
 ### Create Conda Environment
+
   conda create -n pathologykg python=3.10.18
   conda activate pathologykg
 
 ### Install PyTorch
+
 Install PyTorch with CUDA 12.6:
   pip install torch==2.7.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 
@@ -21,6 +23,7 @@ Verify installation:
   python -c "import torch;print(torch.__version__)"
 
 ### Install Dependencies
+
   pip install biopython
   pip install requests
   pip install urllib3
@@ -29,11 +32,17 @@ Verify installation:
 ## Step 2.Pathology Knowledge Graph Construction from PubMed
 
 ### Configuration
+
 1、Edit the following parameters in config.py
+
 1.1、PubMed API
+
 1.2、Set your email (required by NCBI):
+
   ENTREZ_EMAIL = "your_email@example.com"
+  
 1.3、LLM API
+
   Configure your LLM API:
     API_KEY = "your_api_key"
     API_URL = "https://api.yunwu.ai/v1/chat/completions"
