@@ -1,6 +1,5 @@
 # 🧠 PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs
 
----
 
 # ⚙️ 1. Environment Setup
 
@@ -11,7 +10,6 @@
 - **PyTorch:** 2.7.1 + CUDA 12.6  
 - **GPU:** recommended (for other components in the full project)
 
----
 
 ## 🧪 1.2 Create Conda Environment
 
