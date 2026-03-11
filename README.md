@@ -1,10 +1,15 @@
 # 🧠 PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs
 
-# 🤖 Overview
+# 🤖 Overview 
 <center>
   <img src="https://github.com/jylEcho/PathMem/blob/main/figs/introductionV16.jpg" width="800" alt="">
 </center>
 
+# 📡 Method Overview 
+
+<center>
+  <img src="https://github.com/jylEcho/PathMem/blob/main/figs/FrameworkV15.jpg" width="800" alt="">
+</center>
 
 # ⚙️ Step-1. Environment Setup
 
