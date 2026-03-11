@@ -1,7 +1,7 @@
 # 🧠 PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs
 
 
-# ⚙️ 1. Environment Setup
+# ⚙️ Step-1. Environment Setup
 
 ## 🖥️ 1.1 System Requirements
 
@@ -18,26 +18,32 @@ conda create -n pathologykg python=3.10.18
 conda activate pathologykg
 ```
 
-### Install PyTorch
+## 🔥 Install PyTorch
 
+```
 Install PyTorch with CUDA 12.6:
   pip install torch==2.7.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 
 Verify installation:
   python -c "import torch;print(torch.__version__)"
+```
 
-### Install Dependencies
+## 📦 Install Dependencies
 
+```
   pip install biopython
   pip install requests
   pip install urllib3
   pip install tqdm
+```
 
-## Step 2.Pathology Knowledge Graph Construction from PubMed
+# 🧬 Step-2.Pathology Knowledge Graph Construction from PubMed
 
-### 2.1 Configuration
+## ⚙️ 2.1 Configuration
 
+```
 Edit the following parameters in config.py
+```
 
 2.1.1 PubMed API
 
