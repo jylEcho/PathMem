@@ -15,7 +15,8 @@
 
 ```bash
 conda create -n pathologykg python=3.10.18
-conda activate pathologykg```
+conda activate pathologykg
+```
 
 ### Install PyTorch
 
