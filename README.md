@@ -184,7 +184,7 @@ edges.jsonl
 python main.py
 ```
 
-The KG-constracted is available at https://drive.google.com/drive/folders/1ivsp4fyCXsrFjmdYRHI5XLuW0MX6l19l?usp=drive_link
+
 
 # 🏋️ Step 3.Model training
 
